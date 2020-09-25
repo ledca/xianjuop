@@ -59,8 +59,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-
-    - name: Clone source code
+        sudo distclean   
       working-directory: /workdir
       run: |
         df -hT $PWD
